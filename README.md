@@ -12,6 +12,8 @@ An expectation API for PHPUnit, inspired by [Jest](https://jestjs.io) for JS, an
 
 ## Install
 
+> This requires PHP 8.
+
 The best way to install this package is with Composer.
 
 ```sh
