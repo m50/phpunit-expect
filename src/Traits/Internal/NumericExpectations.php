@@ -60,6 +60,7 @@ trait NumericExpectations
     public function toBeLessThanOrEqual(float|int $value): static
     {
         $this->handleExpectationStr($value, 'lessThanOrEqual', 'greaterThan');
+
         return $this;
     }
 }
