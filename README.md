@@ -8,7 +8,7 @@
 [![Total Downloads](https://poser.pugx.org/m50/phpunit-expect/downloads)](https://packagist.org/packages/m50/phpunit-expect)
 [![License](https://poser.pugx.org/m50/phpunit-expect/license)](https://packagist.org/packages/m50/phpunit-expect)
 
-An expectation API for PHPUnit, inspired for Mocha or Jest for JS.
+An expectation API for PHPUnit, inspired by [Jest](https://jestjs.io) for JS, and [Pest](https://pestphp.com) for PHP.
 
 ## Install
 
