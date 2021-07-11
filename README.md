@@ -1,5 +1,13 @@
 # PHPUnit Expect
 
+![psalm type coverage](https://shepherd.dev/github/m50/phpunit-expect/coverage.svg)
+[![Test](https://github.com/m50/phpunit-expect/actions/workflows/test.yml/badge.svg)](https://github.com/m50/phpunit-expect/actions/workflows/test.yml)
+[![styleci status](https://github.styleci.io/repos/384875482/shield)](https://github.styleci.io/repos/384875482)
+
+[![Latest Stable Version](https://poser.pugx.org/m50/phpunit-expect/v/stable)](https://packagist.org/packages/m50/phpunit-expect)
+[![Total Downloads](https://poser.pugx.org/m50/phpunit-expect/downloads)](https://packagist.org/packages/m50/phpunit-expect)
+[![License](https://poser.pugx.org/m50/phpunit-expect/license)](https://packagist.org/packages/m50/phpunit-expect)
+
 An expectation API for PHPUnit, inspired for Mocha or Jest for JS.
 
 ## Install
