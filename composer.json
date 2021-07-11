@@ -1,0 +1,30 @@
+{
+    "name": "m50/phpunit-expect",
+    "description": "An expectation API for phpunit.",
+    "type": "library",
+    "require": {
+        "php": "^8",
+        "phpunit/phpunit": "^9.5"
+    },
+    "require-dev": {
+        "vimeo/psalm": "^4.8",
+        "symfony/var-dumper": "^5.3"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Marisa Clardy",
+            "email": "marisa@clardy.eu"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Expect\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    }
+}
