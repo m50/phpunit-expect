@@ -22,6 +22,8 @@ composer require --dev m50/phpunit-expect
 
 ## Usage
 
+> For additional examples, check out the tests, every expectation is utilized in a test.
+
 When writing tests, instead of using the standard assert, you can use expect.
 
 ```php
@@ -109,6 +111,18 @@ public function testSequence()
     $class = new \stdClass();
     $class->first = 1;
     $class->second = 2;
+}
+```
+
+Additionally, you can `not` any expectation as well:
+
+```php
+public function testAdd()
+{
+    $this->expect(2 + 2)->not->toEqual(4);
+
+    // Or you can use the function, if you prefer.
+    $this->expect(2 + 2)->not()->toEqual(4);
 }
 ```
 
