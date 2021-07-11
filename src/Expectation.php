@@ -68,7 +68,7 @@ final class Expectation
 
     public function __get(string $name)
     {
-        if ($name === 'not') {
+        if ($name === 'not' || $name === '!') {
             return $this->not();
         }
 
