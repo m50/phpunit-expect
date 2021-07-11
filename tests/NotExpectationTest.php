@@ -21,5 +21,11 @@ class NotExpectationTest extends TestCase
         }
 
         $this->expect(false)->not->toBeTruthy();
+        $this->expect(0)->not->toBeTruthy();
+    }
+
+    public function testExclamationMark()
+    {
+        $this->expect('test')->{'!'}->toBe('echo');
     }
 }
