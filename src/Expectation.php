@@ -16,6 +16,7 @@ use Traversable;
 
 /**
  * @property-read Expectation $not
+ * @property-read Expectation $and
  */
 final class Expectation
 {
@@ -70,6 +71,10 @@ final class Expectation
     {
         if ($name === 'not' || $name === '!') {
             return $this->not();
+        }
+
+        if ($name === 'and') {
+            return $this->and($this->expected);
         }
 
         if ($this->isArray() && isset($this->expected[$name])) {
