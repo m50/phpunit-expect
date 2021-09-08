@@ -78,4 +78,13 @@ class ExpectationTest extends TestCase
         $this->expect('{"key":"value"}')->toBeJson();
         $this->expect('hi')->not->toBeJson();
     }
+
+    public function testAnd()
+    {
+        $this->expect(1)->toBe(1)
+            ->and(2)->not->toBe(1);
+
+        $this->expect(1)->toBe(1)
+            ->and->not->toBe(2);
+    }
 }

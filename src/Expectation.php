@@ -16,6 +16,7 @@ use Traversable;
 
 /**
  * @property-read Expectation $not
+ * @property-read Expectation $and
  */
 final class Expectation
 {
@@ -70,6 +71,10 @@ final class Expectation
     {
         if ($name === 'not' || $name === '!') {
             return $this->not();
+        }
+
+        if ($name === 'and') {
+            return $this->and($this->expected);
         }
 
         if ($this->isArray() && isset($this->expected[$name])) {
@@ -150,5 +155,16 @@ final class Expectation
             Assert::assertNotFalse($closure);
             $closure();
         }
+    }
+
+    public function and(mixed ...$obj): self
+    {
+        if (count($obj) === 0) {
+            $obj = $this->expected;
+        } elseif (count($obj) === 1) {
+            $obj = $obj[0];
+        }
+
+        return new self($this->test, $obj);
     }
 }
