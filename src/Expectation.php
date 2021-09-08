@@ -151,4 +151,15 @@ final class Expectation
             $closure();
         }
     }
+
+    public function and(mixed ...$obj): self
+    {
+        if (count($obj) === 0) {
+            $obj = $this->expected;
+        } elseif (count($obj) === 1) {
+            $obj = $obj[0];
+        }
+
+        return new self($this->test, $obj);
+    }
 }
